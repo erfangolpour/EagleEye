@@ -5,7 +5,7 @@ EagleEye combines the power of web scraping with machine vision to search for ob
 Currently, EagleEye uses YoloV3 weights to perform object detection. Due to GitHub restrictions, the pretrained model could not be uploaded to this repository. However, it can be downloaded [here](https://pjreddie.com/media/files/yolov3.weights). You should place the pretrained model inside Yolo folder once you download it.
 
 ## Preview
-Car is the object of interest in this example:
+Cars are the objects of interest in this example:
 ![preview-gif](examples/preview.gif)
 
 ## TODO
