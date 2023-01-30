@@ -6,9 +6,9 @@ Currently, EagleEye uses YoloV3 weights to perform object detection. Due to the 
 
 ## Preview
 Cars are the object of interest in this example:
-<center>
-<img alt="preview-gif" src="examples/preview.gif" />
-</center>
+<p align="center">
+  <img alt="preview-gif" src="examples/preview.gif" />
+</p>
 
 ## TODO
 - [X] Automatically open the results
