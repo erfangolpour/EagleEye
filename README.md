@@ -12,5 +12,5 @@ Cars are the object of interest in this example:
 
 ## TODO
 - [X] Automatically open the results
-- [ ] Update the DNN model to YOLOv4
+- [ ] Update the CNN model to YOLOv4
 - [ ] Add a graphical user interface
