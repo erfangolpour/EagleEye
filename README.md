@@ -1,4 +1,9 @@
 # EagleEye
+
+<p align="center">
+  <img alt="logo" src="examples/logo.jpeg" />
+</p>
+
 EagleEye combines the power of web scraping and machine vision to search for objects across the globe using public IP cameras. The cameras are scraped from the internet, courtesy of [Insecam](http://insecam.org), and then processed using YOLOv3 pretrained model. The objects available in this model can be found [here](https://github.com/pjreddie/darknet/blob/master/data/coco.names).
 
 ## Pretrained Model
