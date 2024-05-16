@@ -28,7 +28,7 @@ git clone https://github.com/your-username/EagleEye.git
 pip install -r requirements.txt
 ```
 
-3. Due to the restrictions of GitHub, the weights cannot be uploaded to this repository. However, they are available to download from [this)(https://pjreddie.com/media/files/yolov3.weights) url. Download `YOLOv3.weights` and place it in the directory named `YOLO`.
+3. Due to the restrictions of GitHub, the weights cannot be uploaded to this repository. However, they are available to download from [this](https://pjreddie.com/media/files/yolov3.weights) url. Download `YOLOv3.weights` and place it in the directory named `YOLO`.
 
 ## Usage
 
