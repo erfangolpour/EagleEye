@@ -1,4 +1,3 @@
-```markdown
 # EagleEye
 
 <p align="center">
