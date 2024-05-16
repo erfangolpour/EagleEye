@@ -74,7 +74,7 @@ This project is licensed under the [GPLv3](LICENSE) license.
 ## Acknowledgments
 
 Special thanks to:
-- The (YOLO)[https://pjreddie.com/darknet/yolo/] object detection model and weights.
-- The (Insecam website)[http://www.insecam.org] for providing access to public camera streams.
-- The (pycountry library)[https://pypi.org/project/pycountry/] for country information.
-- The (tqdm library)[https://github.com/tqdm/tqdm] for progress bar visualization.
+- The [YOLO](https://pjreddie.com/darknet/yolo/) object detection model and weights.
+- The [Insecam website](http://www.insecam.org) for providing access to public camera streams.
+- The [pycountry library](https://pypi.org/project/pycountry/) for country information.
+- The [tqdm library](https://github.com/tqdm/tqdm) for progress bar visualization.
