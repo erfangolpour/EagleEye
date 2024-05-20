@@ -4,11 +4,11 @@
   <img alt="logo" src="examples/logo.jpeg" width=320 />
 </p>
 
-EagleEye is a Python script that tracks public cameras scraped from Insecam public camera directory to find a specified object using the YOLOv3 object detection model. The objects available in this model can be found [here](https://github.com/pjreddie/darknet/blob/master/data/coco.names). EagleEye also utilizes multithreading to efficiently scan multiple camera streams concurrently.
+EagleEye is a Python script that tracks public cameras scraped from Insecam public camera directory to find a specified object using the YOLOv4 object detection model. The objects available in this model can be found [here](https://github.com/pjreddie/darknet/blob/master/data/coco.names). EagleEye also utilizes multithreading to efficiently scan multiple camera streams concurrently.
 
 ## Features
 
-- Detects objects in public camera streams using the YOLOv3 object detection model.
+- Detects objects in public camera streams using the YOLOv4 object detection model.
 - Utilizes multithreading for efficient scanning of multiple camera streams simultaneously.
 - Provides information about the detected camera's IP address, geolocation, and confidence level.
 - Allows limiting the search to a specific country.
@@ -28,7 +28,7 @@ git clone https://github.com/your-username/EagleEye.git
 pip install -r requirements.txt
 ```
 
-3. Due to the restrictions of GitHub, the weights cannot be uploaded to this repository. However, they are available to download from [this](https://pjreddie.com/media/files/yolov3.weights) url. Download `YOLOv3.weights` and place it in the directory named `YOLO`.
+3. Due to the restrictions of GitHub, the weights cannot be uploaded to this repository. Download `yolov4.weights` file 245 MB: [yolov4.weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights) (Google-drive mirror [yolov4.weights](https://drive.google.com/open?id=1cewMfusmPjYWbrnuJRuKhPMwRe_b9PaT)) and place it in the directory named `YOLO`.
 
 ## Usage
 
@@ -74,7 +74,7 @@ EagleEye is released under the [GPLv3 License](LICENSE).
 ## Acknowledgments
 
 Special thanks to:
-- The [YOLO](https://pjreddie.com/darknet/yolo/) object detection model and weights.
+- The [YOLO](https://github.com/AlexeyAB/darknet) object detection model and weights.
 - The [Insecam website](http://www.insecam.org) for providing access to public camera streams.
 - The [pycountry library](https://pypi.org/project/pycountry/) for country information.
 - The [tqdm library](https://github.com/tqdm/tqdm) for progress bar visualization.
