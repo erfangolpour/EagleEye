@@ -1,5 +1,4 @@
 import argparse
-import concurrent.futures
 import os
 import queue
 import re
@@ -28,15 +27,6 @@ USER_AGENT = "Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.1.5) Gecko/200
 
 # regex constants
 IP_PATTERN = r"^(?:http)s?(?::\/\/)(?:\d{1,3}\.){3}\d{1,3}(?::\d+)?\/.*$"
-
-# load the COCO class labels the YOLO model was trained on
-print("[LOADING] Loading object labels...")
-with open(os.path.join("YOLO", "coco.names")) as lablesFile:
-    LABELS = lablesFile.read().strip().split("\n")
-
-raw_results = []
-final_results = []
-all_the_objects_found = defaultdict(int)
 
 
 def analyze_ip(url):
@@ -175,6 +165,10 @@ def search_cameras(n, url, max_pages):
 
 
 if __name__ == "__main__":
+    # load the COCO class labels the YOLO model was trained on
+    print("[LOADING] Loading object labels...")
+    with open(os.path.join("YOLO", "coco.names")) as lablesFile:
+        LABELS = lablesFile.read().strip().split("\n")
 
     def Country(x):
         x = x.upper()
@@ -194,7 +188,7 @@ if __name__ == "__main__":
 
     # argument parser
     parser = argparse.ArgumentParser(
-        description="Eagle Eye - A tool for scanning security cameras"
+        description="EagleEye - A tool for scanning public security cameras"
     )
     parser.add_argument(
         "-n",
@@ -226,6 +220,10 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
+    raw_results = []
+    final_results = []
+    all_the_objects_found = defaultdict(int)
+
     cameras2scan = queue.Queue()
     is_searching_done = threading.Event()
 
@@ -243,11 +241,14 @@ if __name__ == "__main__":
         )
         searching_process.start()
 
-        # Create a thread pool instead
-        with concurrent.futures.ThreadPoolExecutor(
-            max_workers=args.workers
-        ) as executor:
-            executor.map(process_cameras, [args.object] * args.workers)
+        # Create a thread pool
+        scanning_threads = [
+            threading.Thread(target=process_cameras, args=(args.object,), daemon=True)
+            for _ in range(args.workers)
+        ]
+        [thread.start() for thread in scanning_threads]
+        [thread.join() for thread in scanning_threads]
+
         pbar.close()
     except KeyboardInterrupt:
         print("\n[EXITING] Keyboard Interrupt")
