@@ -32,23 +32,23 @@ pip install -r requirements.txt
 
 ## Usage
 
-1. Navigate to the project directory:
-
-```bash
-cd EagleEye
 ```
+usage: EagleEye.py [-h] [-n NUMBER] -o {person,bicycle,car,...}
+                   [-w WORKERS] [-c COUNTRY]
 
-2. Run the script:
+EagleEye - A tool for scanning public security cameras
 
-```bash
-python EagleEye.py
+options:
+  -h, --help            show this help message and exit
+  -n NUMBER, --number NUMBER
+                        Maximum number of cameras to scan (100 is the deafult value)
+  -o {person,bicycle,car,...}
+                        The object you are searching for (Please refer to YOLOv3 - Darknet/coco.names - for more information)
+  -w WORKERS, --workers WORKERS
+                        Limit the number of workers in the multiprocessing pool
+  -c COUNTRY, --country COUNTRY
+                        Filter the results by specifying a country
 ```
-
-3. Follow the prompts to specify the maximum number of cameras to scan, the object label to search for, and other optional parameters.
-
-4. Once the scanning is complete, the script will display the detected camera URLs, IP information, and confidence levels.
-
-5. You can choose to open the detected camera streams in a web browser.
 
 ## Demonstration
 
