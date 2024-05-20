@@ -159,6 +159,9 @@ def search_cameras(n, url, max_pages):
                     cameras2scan.put(ip)
         except requests.exceptions.Timeout:
             continue
+        except Exception as e:
+            print(f"[ERROR] {e}")
+            continue
 
     is_searching_done.set()
     return True
