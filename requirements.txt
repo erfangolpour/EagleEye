@@ -1,5 +1,4 @@
 numpy
-pycountry
 opencv-python
 tqdm
 requests
