@@ -76,5 +76,4 @@ EagleEye is released under the [GPLv3 License](LICENSE).
 Special thanks to:
 - The [YOLO](https://github.com/AlexeyAB/darknet) object detection model and weights.
 - The [Insecam website](http://www.insecam.org) for providing access to public camera streams.
-- The [pycountry library](https://pypi.org/project/pycountry/) for country information.
 - The [tqdm library](https://github.com/tqdm/tqdm) for progress bar visualization.
