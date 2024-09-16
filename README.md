@@ -43,7 +43,7 @@ options:
   -n NUMBER, --number NUMBER
                         Maximum number of cameras to scan (100 is the deafult value)
   -o {person,bicycle,car,...}
-                        The object you are searching for (Please refer to YOLOv3 - Darknet/coco.names - for more information)
+                        The object you are searching for (Please refer to YOLOv4 - Darknet/coco.names - for more information)
   -w WORKERS, --workers WORKERS
                         Limit the number of workers in the multiprocessing pool
   -c COUNTRY, --country COUNTRY
