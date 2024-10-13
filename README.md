@@ -4,7 +4,8 @@
   <img alt="logo" src="examples/logo.jpeg" width=320 />
 </p>
 
-EagleEye is a Python script that tracks public cameras scraped from Insecam public camera directory to find a specified object using the YOLOv4 object detection model. The objects available in this model can be found [here](https://github.com/pjreddie/darknet/blob/master/data/coco.names). EagleEye also utilizes multithreading to efficiently scan multiple camera streams concurrently.
+Find and watch a car, a cat, or even a person in real-time!
+EagleEye is a Python script that tracks public cameras scraped from Insecam public camera directory to find a specified object using the YOLOv4 object detection model. The objects available in this model can be found [here](https://github.com/pjreddie/darknet/blob/master/data/coco.names). EagleEye utilizes multithreading to efficiently scan multiple camera streams concurrently.
 
 ## Features
 
@@ -12,7 +13,7 @@ EagleEye is a Python script that tracks public cameras scraped from Insecam publ
 - Utilizes multithreading for efficient scanning of multiple camera streams simultaneously.
 - Provides information about the detected camera's IP address, geolocation, and confidence level.
 - Allows limiting the search to a specific country.
-- Supports opening detected camera streams in a web browser.
+- Can automatically open detected camera streams in your web browser.
 
 ## Installation
 
@@ -74,6 +75,6 @@ EagleEye is released under the [GPLv3 License](LICENSE).
 ## Acknowledgments
 
 Special thanks to:
-- The [YOLO](https://github.com/AlexeyAB/darknet) object detection model and weights.
+- The [YOLO](https://github.com/AlexeyAB/darknet) object detection model.
 - The [Insecam website](http://www.insecam.org) for providing access to public camera streams.
 - The [tqdm library](https://github.com/tqdm/tqdm) for progress bar visualization.
