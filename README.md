@@ -4,7 +4,7 @@
   <img alt="logo" src="examples/logo.jpeg" width=320 />
 </p>
 
-Find and watch a car, a cat, or even a person in real-time!
+Find a car, a toaster, or even a zebra and watch it in real-time!
 EagleEye is a Python script that tracks public cameras scraped from Insecam public camera directory to find a specified object using the YOLOv4 object detection model. The objects available in this model can be found [here](https://github.com/pjreddie/darknet/blob/master/data/coco.names). EagleEye utilizes multithreading to efficiently scan multiple camera streams concurrently.
 
 ## Features
