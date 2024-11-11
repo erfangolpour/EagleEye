@@ -19,7 +19,7 @@ Find a car, a toaster, or even a zebra and watch it in real-time! EagleEye is a 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/EagleEye.git
+git clone https://github.com/erfangolpour/EagleEye.git
 ```
 
 2. Install the required dependencies:
