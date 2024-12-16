@@ -1,14 +1,10 @@
-# EagleEye
+# ArguX
 
-<p align="center">
-  <img alt="logo" src="examples/logo.jpeg" width=320 />
-</p>
-
-Find a car, a toaster, or even a zebra and watch it in real-time! EagleEye is a Python script that tracks public cameras scraped from Insecam public camera directory to find a specified object using the YOLOv4 object detection model. The objects available in this model can be found [here](https://github.com/pjreddie/darknet/blob/master/data/coco.names). EagleEye utilizes multithreading to efficiently scan multiple camera streams concurrently.
+Find a car, a toaster, or even a zebra and watch it in real-time! ArguX is a Python script that tracks public cameras scraped from Insecam public camera directory to find a specified object using [YOLOv4](https://arxiv.org/pdf/2004.10934). The name is borrowed from Greek mythology. Argus or Argos Panoptes (Ancient Greek: Ἄργος Πανόπτης, "All-seeing Argos") is a many-eyed giant in Greek mythology that can see "all".
 
 ## Features
 
-- Detects objects in public camera streams using the YOLOv4 object detection model.
+- Detects objects in public camera streams using YOLOv4.
 - Utilizes multithreading for efficient scanning of multiple camera streams simultaneously.
 - Provides information about the detected camera's IP address, geolocation, and confidence level.
 - Allows limiting the search to a specific country.
@@ -19,7 +15,7 @@ Find a car, a toaster, or even a zebra and watch it in real-time! EagleEye is a 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/erfangolpour/EagleEye.git
+git clone https://github.com/erfangolpour/ArguX.git
 ```
 
 2. Install the required dependencies:
@@ -33,10 +29,10 @@ pip install -r requirements.txt
 ## Usage
 
 ```
-usage: EagleEye.py [-h] [-n NUMBER] -o {person,bicycle,car,...}
+usage: ArguX.py [-h] [-n NUMBER] -o {person,bicycle,car,...}
                    [-w WORKERS] [-c COUNTRY]
 
-EagleEye - A tool for scanning public security cameras
+ArguX - A tool for scanning public security cameras
 
 options:
   -h, --help            show this help message and exit
@@ -49,6 +45,8 @@ options:
   -c COUNTRY, --country COUNTRY
                         Filter the results by specifying a country
 ```
+
+The list of objects available to search for can be found [here](https://github.com/pjreddie/darknet/blob/master/data/coco.names).
 
 ## Demonstration
 
@@ -69,7 +67,7 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 
 ## License
 
-EagleEye is released under the [GPLv3 License](LICENSE).
+ArguX is released under the [GPLv3 License](LICENSE).
 
 ## Acknowledgments
 
