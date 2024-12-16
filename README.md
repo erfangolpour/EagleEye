@@ -1,52 +1,67 @@
 # ArguX
 
-Find a car, a toaster, or even a zebra and watch it in real-time! ArguX is a Python script that tracks public cameras scraped from Insecam public camera directory to find a specified object using [YOLOv4](https://arxiv.org/pdf/2004.10934). The name is borrowed from Greek mythology. Argus or Argos Panoptes (Ancient Greek: Ἄργος Πανόπτης, "All-seeing Argos") is a many-eyed giant in Greek mythology that can see "all".
+## Real-Time Object Detection in Public Camera Feeds
+
+Track cars, toasters, or even zebras in real-time! **ArguX** is a Python script that uses public cameras from the Insecam directory to locate specified objects with the power of [YOLOv4](https://arxiv.org/pdf/2004.10934). The name comes from Greek mythology, where Argus Panoptes (Ἀὁγος Πανόπτης, "All-seeing Argos") is a many-eyed giant capable of seeing everything.
+
+---
 
 ## Features
 
-- Detects objects in public camera streams using YOLOv4.
-- Utilizes multithreading for efficient scanning of multiple camera streams simultaneously.
-- Provides information about the detected camera's IP address, geolocation, and confidence level.
-- Allows limiting the search to a specific country.
-- Can automatically open detected camera streams in your web browser.
+- Multithreaded for scanning multiple streams simultaneously.
+- Provides the detected camera's IP address, geolocation, and the model's confidence level in identifying the specified object.
+- Filter searches by country.
+- Option to open detected camera streams directly in your web browser.
+
+---
 
 ## Installation
 
 1. Clone the repository:
 
-```bash
-git clone https://github.com/erfangolpour/ArguX.git
-```
+   ```bash
+   git clone https://github.com/erfangolpour/ArguX.git
+   ```
 
 2. Install the required dependencies:
 
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-3. Download `yolov4.weights` file 245 MB: [yolov4.weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights) (Google-drive mirror [yolov4.weights](https://drive.google.com/open?id=1cewMfusmPjYWbrnuJRuKhPMwRe_b9PaT)) and place it in the directory named `YOLO`.
+3. Download the YOLOv4 weights file (245 MB):
+
+   - [yolov4.weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.weights)
+   - Google Drive mirror: [yolov4.weights](https://drive.google.com/open?id=1cewMfusmPjYWbrnuJRuKhPMwRe_b9PaT)
+
+   Place the file in the `YOLO` directory.
+
+---
 
 ## Usage
 
-```
-usage: ArguX.py [-h] [-n NUMBER] -o {person,bicycle,car,...}
-                   [-w WORKERS] [-c COUNTRY]
+Run the script with the following options:
+
+```bash
+usage: ArguX.py [-h] [-n NUMBER] -o {person,bicycle,car,...} [-w WORKERS] [-c COUNTRY]
 
 ArguX - A tool for scanning public security cameras
 
-options:
-  -h, --help            show this help message and exit
+Options:
+  -h, --help            Show this help message and exit.
   -n NUMBER, --number NUMBER
-                        Maximum number of cameras to scan (100 is the deafult value)
+                        Maximum number of cameras to scan (default: 100).
   -o {person,bicycle,car,...}
-                        The object you are searching for (Please refer to YOLOv4 - Darknet/coco.names - for more information)
+                        Specify the object to search for (refer to YOLOv4 - Darknet/coco.names for options).
   -w WORKERS, --workers WORKERS
-                        Limit the number of workers in the multiprocessing pool
+                        Limit the number of multiprocessing pool workers.
   -c COUNTRY, --country COUNTRY
-                        Filter the results by specifying a country
+                        Filter results by country.
 ```
 
-The list of objects available to search for can be found [here](https://github.com/pjreddie/darknet/blob/master/data/coco.names).
+You can find the list of searchable objects [here](https://github.com/pjreddie/darknet/blob/master/data/coco.names).
+
+---
 
 ## Demonstration
 
@@ -54,24 +69,35 @@ The list of objects available to search for can be found [here](https://github.c
   <img alt="preview-gif" src="examples/preview.gif" />
 </p>
 
+---
+
 ## Configuration
 
-- `MIN_CONFIDENCE`: The minimum confidence threshold for object detection (default: 0.6).
-- `OPTIMIZED_MAX_WORKERS`: The default number of worker threads (set to the number of CPU cores minus one).
-- `REQUEST_TIMEOUT`: The timeout for web requests in seconds (default: 10).
-- `USER_AGENT`: The user agent string for web requests.
+The following settings can be customized in the script:
+
+- `MIN_CONFIDENCE`: Minimum confidence threshold for object detection (default: 0.6).
+- `OPTIMIZED_MAX_WORKERS`: Default number of worker threads (CPU cores minus one).
+- `REQUEST_TIMEOUT`: Timeout duration for web requests in seconds (default: 10).
+- `USER_AGENT`: User agent string for web requests.
+
+---
 
 ## Contributing
 
-Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+Contributions are welcome! If you encounter any issues or have ideas for improvement, feel free to open an issue or submit a pull request.
+
+---
 
 ## License
 
-ArguX is released under the [GPLv3 License](LICENSE).
+This project is licensed under the [GPLv3 License](LICENSE).
+
+---
 
 ## Acknowledgments
 
 Special thanks to:
+
 - The [YOLO](https://github.com/AlexeyAB/darknet) object detection model.
-- The [Insecam website](http://www.insecam.org) for providing access to public camera streams.
+- The [Insecam website](http://www.insecam.org) for public camera streams.
 - The [tqdm library](https://github.com/tqdm/tqdm) for progress bar visualization.
