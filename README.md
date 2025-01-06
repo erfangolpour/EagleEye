@@ -2,7 +2,7 @@
 
 ## Real-Time Object Detection in Public Camera Feeds
 
-**ArguX** is a Python script that scans public cameras gathered from [Insecam](http://www.insecam.org/) to locate specified objects through utilizing [YOLOv4](https://arxiv.org/pdf/2004.10934) object detection model. The name is inspired by Greek mythology, where Argus Panoptes (Ἀὁγος Πανόπτης, "All-seeing Argos") is a many-eyed giant capable of seeing everything.
+**ArguX** is a Python script that scans public cameras gathered from [Insecam](http://www.insecam.org/) to locate objects of interest through utilizing [YOLOv4](https://arxiv.org/pdf/2004.10934) object detection model. The name is inspired by Greek mythology, where Argus Panoptes (Ἀὁγος Πανόπτης, "All-seeing Argos") is a many-eyed giant capable of seeing everything.
 
 ---
 
