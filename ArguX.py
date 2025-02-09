@@ -106,7 +106,7 @@ class Camera:
                     objects[LABELS[classID]].append(confidence)
 
         self.objects = [
-            (obj, np.average(confidence)) for obj, confidence in objects.items()
+            (obj, np.max(confidence)) for obj, confidence in objects.items()
         ]
         return self.objects
 
