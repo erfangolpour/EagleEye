@@ -65,6 +65,8 @@ You can find the list of searchable objects [here](https://github.com/pjreddie/d
 
 ## Demonstration
 
+The object of interest here is set to `car`:
+
 <p align="center">
   <img alt="preview-gif" src="examples/preview.gif" />
 </p>
