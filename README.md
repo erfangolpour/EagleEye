@@ -1,8 +1,8 @@
-# ArguX
+# EagleEye
 
 ## Real-Time Object Detection in Public Camera Feeds
 
-**ArguX** is a Python script that scans public cameras gathered from [Insecam](http://www.insecam.org/) to locate objects of interest via [YOLOv4](https://arxiv.org/pdf/2004.10934) object detection model. The name is inspired by Greek mythology, where Argus Panoptes (Ἀὁγος Πανόπτης, "All-seeing Argos") is a many-eyed giant capable of seeing everything.
+**EagleEye** is a Python script that scans public cameras gathered from [Insecam](http://www.insecam.org/) to locate objects of interest via [YOLOv4](https://arxiv.org/pdf/2004.10934) object detection model. The name is inspired by Greek mythology, where Argus Panoptes (Ἀὁγος Πανόπτης, "All-seeing Argos") is a many-eyed giant capable of seeing everything.
 
 ---
 
@@ -20,7 +20,7 @@
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/erfangolpour/ArguX.git
+   git clone https://github.com/erfangolpour/EagleEye.git
    ```
 
 2. Install the required dependencies:
@@ -43,9 +43,9 @@
 Run the script with the following options:
 
 ```bash
-usage: ArguX.py [-h] [-n NUMBER] -o {person,bicycle,car,...} [-w WORKERS] [-c COUNTRY]
+usage: EagleEye.py [-h] [-n NUMBER] -o {person,bicycle,car,...} [-w WORKERS] [-c COUNTRY]
 
-ArguX - A tool for scanning public security cameras
+EagleEye - A tool for scanning public security cameras
 
 Options:
   -h, --help            Show this help message and exit.
