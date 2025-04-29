@@ -8,7 +8,7 @@ EagleEye has been archived. The development of a web interface and major updates
 
 ## Real-Time Object Detection in Public Camera Feeds
 
-**EagleEye** is a Python script that scans public cameras gathered from [Insecam](http://www.insecam.org/) to locate objects of interest via [YOLOv4](https://arxiv.org/pdf/2004.10934) object detection model. The name is inspired by Greek mythology, where Argus Panoptes (Ἀὁγος Πανόπτης, "All-seeing Argos") is a many-eyed giant capable of seeing everything.
+**EagleEye** is a Python script that scans public cameras gathered from [Insecam](http://www.insecam.org/) to locate objects of interest via [YOLOv4](https://arxiv.org/pdf/2004.10934) object detection model.
 
 ---
 
