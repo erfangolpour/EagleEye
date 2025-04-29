@@ -1,4 +1,4 @@
-## Project Archived
+# Project Archived
 
 EagleEye has been archived. The development of a web interface and major updates have moved to a new repository. Please visit [ArguX](https://github.com/erfangolpour/argux) for the latest version and ongoing improvements.
 
@@ -6,8 +6,6 @@ EagleEye has been archived. The development of a web interface and major updates
 <br />
 
 # EagleEye
-
----
 
 ## Real-Time Object Detection in Public Camera Feeds
 
